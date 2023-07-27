@@ -2,11 +2,11 @@
 import requests
 from bs4   import BeautifulSoup as bs
 
-gitpf = "https://github.com/Happinessprashant"
+git_pf = "https://github.com/Happinessprashant"
 
-req= requests.get(gitpf)
+req= requests.get(git_pf)
 
-scrapper = bs(req.content,"html.parser")
+scrapper = bs(req.content,"html.parsr")
 profile_pic = scrapper.find("img" , {"alt":"Avatar"})["src"]
 
 print(profile_pic)
